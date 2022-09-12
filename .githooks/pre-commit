@@ -11,9 +11,6 @@ if [[ $? -ne 0 ]] ; then
     echo "$lint"
 fi
 
-echo "running hadolint against Dockerfile"
-hadolint Dockerfile
-
 echo "running go test ./..."
 # a bit of bash trickery to silence the output on success
 test="$(go test ./...)"
